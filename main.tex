@@ -1,0 +1,37 @@
+
+% ===============================================
+% MATH 790: Real Analysis           Spring 2022
+% hw_template.tex
+% ===============================================
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,hyperref,esvect, cancel}
+\usepackage{physics}
+\usepackage{centernot}
+\usepackage{minted}
+
+\newcommand{\R}{\mathbb{R}}  
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+\renewcommand{\labelenumii}{\alph{enumii}.}
+\renewcommand{\(}{\left(}
+\renewcommand{\)}{\right)}
+
+\begin{document}
+
+\title{Taller 1}
+\author{Andrés Ortega}
+\date{}
+
+\maketitle
+
+\section{Algorithms}
+\subsection{Erdős' Multiplication Table Problem}
+\inputminted[linenos, frame=lines]{python}{code/erdos_multiplication_table.py}
+
+\end{document}
