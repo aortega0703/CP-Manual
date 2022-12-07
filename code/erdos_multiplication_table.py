@@ -1,3 +1,4 @@
+# D: divisor pairs for N
 def delta(D):
     A = k = 0
     for i in range(1, D[-1][0]): # 0 < i < g

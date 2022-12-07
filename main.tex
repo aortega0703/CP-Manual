@@ -24,7 +24,7 @@
 
 \begin{document}
 
-\title{Taller 1}
+\title{CP Manual}
 \author{Andrés Ortega}
 \date{}
 
@@ -32,6 +32,25 @@
 
 \section{Algorithms}
 \subsection{Erdős' Multiplication Table Problem}
+
+Given a $n\times n$ multiplication table, how many unique numbers $M(n)$
+are there?
+\begin{equation*}
+    M(n) = \left|\{ab: 1 \leq a,b \leq n\}\right|
+\end{equation*}
+
+\noindent Let $\delta(n)$ count the entries of the column $n$ that
+appear in the $(n-1)\times(n-1)$ table.
+\begin{equation*}
+    M(n) = M(n-1) + \(n - \delta(n)\)
+\end{equation*}
+
+\noindent Consider the factorization $ab = (ij)(gh)$. If it is possible to form
+some $mn = (ih)(gj)$ such that $ih, gj < n$ then $mn$ has already appeared in a
+smaller tablea. Now, $ih < n$ iff $i < g$ and $gj < n$ iff $j < n/g = h$. So
+$\delta(n)$ can be computed by counting unique values $i,j$ for each divisor
+$g \leq \sqrt{n}$ of $n$.
+
 \inputminted[linenos, frame=lines]{python}{code/erdos_multiplication_table.py}
 
 \end{document}
