@@ -1,16 +1,12 @@
+# N must be odd and > 2, if unsure check those cases
 def miller_rabin(N):
-    if N == 2:
-        return True
-    if N % 2 == 0 or N < 2:
-        return False
-    
     s = 0
     d = N-1
     while d % 2 == 0: # n-1 = d * 2^s
         s += 1
         d //= 2
     # For unknown (or unbounded) values of n, use
-    # a = [2, min(n − 2, floor(2*ln(n)^2))]
+    # a = [2, min(n-2, 2 * ln(n)^2))]
     for a in [2, 3, 5, 7, 11, 13, 17]:
         x = a**d % N
         for _ in range(s):
