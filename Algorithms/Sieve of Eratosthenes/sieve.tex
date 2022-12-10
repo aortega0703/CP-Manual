@@ -1,3 +1,15 @@
+Time: $O\!\(n \log\log n\)$,\quad Space: $O\!\(n\)$
+
+The classic implementation of the Sieve of Eratosthenes returns a boolean array
+to mark which numbers are composite or prime. The strategy consist on starting
+with every number marked as prime and traversing the array linearly, marking
+off as composite all multiples of prime numbers. It has a time complexity of
+$O\(\displaystyle\sum_{p\text{ prime}}^n \frac{n}{p}\) = O\(n \log\log n\)$
+and a space complexity of $O\(n\)$. A common optimization involves on only
+traversing up to $\sqrt{n}$, although it does not change the time complexity as
+$\log \sqrt{n} = \frac{1}{2}\log n$.
+
+
 \begin{algorithm}[ht]
     \inputminted[linenos, frame=lines]{python}{Algorithms/Sieve\ of\ Eratosthenes/sieve.py}
     \caption{Sieve of Eratosthenes}
