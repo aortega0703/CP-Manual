@@ -1,4 +1,4 @@
-Time: $O\(n^2\tau(n)\)$,\quad Space: $O(n)$
+Time: $O\(n^2\tau(n)\)$,\quad Space: $O(n)$. \cite{multiplication_table_problem}
 
 Given a $n\times n$ multiplication table, how many unique numbers $M(n)$
 are there?
@@ -22,7 +22,7 @@ Space complexity is trivially $O(n)$ since a vector $A$ of length $n$ is needed
 to store all new entries. Time complexity of calculating $\delta(n)$ is
 $O(n\tau(n))$ where $\tau$ is the number of divisors of $n$. Therefore
 computing all values of $M$ until $M(n)$ is $O(n^2\tau)$. This bound can
-be further improved, as detailed in .
+be further improved, as detailed in \cite{multiplication_table_problem}.
 
 \begin{algorithm}
     \inputminted[linenos, frame=lines]{python}{./code/algorithms/erdos_multiplication_table.py}
