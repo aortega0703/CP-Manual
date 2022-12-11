@@ -1,8 +1,3 @@
-
-% ===============================================
-% MATH 790: Real Analysis           Spring 2022
-% hw_template.tex
-% ===============================================
 \documentclass[12pt]{article}
 
 \usepackage[utf8]{inputenc}
@@ -12,6 +7,8 @@
 \usepackage{centernot}
 \usepackage{minted}
 \usepackage{algorithm2e}
+\usepackage[backend=biber,style=ieee,natbib=true]{biblatex} 
+\bibliography{references.bib}
 
 \newcommand{\R}{\mathbb{R}}  
 \newcommand{\Z}{\mathbb{Z}}
@@ -19,7 +16,6 @@
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\<}{\langle}
 \renewcommand{\>}{\rangle}
-\renewcommand{\labelenumii}{\alph{enumii}.}
 \renewcommand{\(}{\left(}
 \renewcommand{\)}{\right)}
 
@@ -31,16 +27,17 @@
 
 \maketitle
 
-
 \section{Algorithms}
 \subsection{Primality Testing}
     \subsubsection{Sieve of Eratosthenes}
-        \input{Algorithms/Sieve of Eratosthenes/sieve.tex}
+        \input{tex/algorithms/sieve_eratosthenes.tex}
 
-    \subsubsection{Miller-Rabin}
-        \input{Algorithms/Miller-Rabin/miller_rabin.tex}
+    \subsubsection{Miller test}
+        \input{tex/algorithms/miller_rabin.tex}
 
 \subsection{Erdős' Multiplication Table Problem}
-\input{Algorithms/Erdos Multiplication Table/erdos_multiplication_table.tex}
+    \subsubsection{Incremental Approach}\cite{multiplication_table_problem}
+        \input{tex/algorithms/erdos_multiplication_table.tex}
 
+\printbibliography
 \end{document}

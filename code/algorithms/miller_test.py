@@ -1,5 +1,5 @@
 # N must be odd and > 2, if unsure check those cases
-def miller_rabin(N):
+def miller_test(N):
     s = 0
     d = N-1
     while d % 2 == 0: # n-1 = d * 2^s
@@ -7,6 +7,7 @@ def miller_rabin(N):
         d //= 2
     # For unknown (or unbounded) values of n, use
     # a = [2, min(n-2, 2 * ln(n)^2))]
+    # If a is chosen randomly it becomes the Miller-Rabin test
     for a in [2, 3, 5, 7, 11, 13, 17]:
         x = a**d % N
         for _ in range(s):
