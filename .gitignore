@@ -1,3 +1,5 @@
 *.pdf
 *.gz
+*.bcf
+*.xml
 _minted-main
