@@ -14,9 +14,9 @@ def miller_test(N):
             y = x**2 % N
             # nontrivial square root of 1 modulo n
             if y == 1 and x != 1 and x != N-1:
-                # Returns a divisor of N
-                # If not needed replace for False
-                return gcd(x - 1, N)
+                # Can be replaced with gcd(x - 1, N)
+                # to return a divisor of N
+                return False
             x = y
         if y != 1:
             return False
