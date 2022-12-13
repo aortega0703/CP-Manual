@@ -8,13 +8,15 @@ def miller_test(N):
     # For unknown (or unbounded) values of n, use
     # a = [2, min(n-2, 2 * ln(n)^2))]
     # If a is chosen randomly it becomes the Miller-Rabin test
-    for a in [2, 3, 5, 7, 11, 13, 17]:
+    for a in [2, 3, 5, 7]:
         x = a**d % N
         for _ in range(s):
             y = x**2 % N
             # nontrivial square root of 1 modulo n
             if y == 1 and x != 1 and x != N-1:
-                return False
+                # Returns a divisor of N
+                # If not needed replace for False
+                return gcd(x - 1, N)
             x = y
         if y != 1:
             return False
