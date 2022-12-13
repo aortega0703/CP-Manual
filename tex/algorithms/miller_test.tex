@@ -1,0 +1,23 @@
+\begin{algorithm}[ht]
+    \inputminted[linenos, frame=lines]{python}{./code/algorithms/miller_test.py}
+    \caption{Miller-Rabin Primality Test}
+\end{algorithm}
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{l|l}
+        \multicolumn{1}{c|}{$n \leq$} & \multicolumn{1}{|c}{$a$}\\
+        \hline
+        $2.047 \times 10^3$    & $\{2\}$\\
+        $1.373 \times 10^6$    & $\{2, 3\}$\\
+        $2.532 \times 10^7$    & $\{2, 3, 5\}$\\
+        $3.215 \times 10^9$    & $\{2, 3, 5, 7\}$\\
+        $2.152 \times 10^{12}$ & $\{2, 3, 5, 7, 11\}$\\
+        $3.474 \times 10^{14}$ & $\{2, 3, 5, 7, 11, 13\}$\\
+        $3.415 \times 10^{14}$ & $\{2, 3, 5, 7, 11, 13, 17\}$\\
+        $3.825 \times 10^{18}$ & $\{2, 3, 5, 7, 11, 13, 17, 19, 23\}$\\
+        $3.186 \times 10^{23}$ & $\{2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37\}$\\
+        $3.317 \times 10^{24}$ & $\{2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41\}$
+    \end{tabular}
+    \caption{Possible witnesses for values of $n$}
+\end{table}
