@@ -1,3 +1,5 @@
+Time: $O\((\log n)^4\)$,\quad Space: $O\(1\)$
+
 Suppose that $p$ is prime and write $p-1$ as $2^sd$ where $d$ is odd. By
 Fermat's little theorem
 \begin{equation*}
@@ -37,6 +39,6 @@ Note that all values of $a$ are consecutive primes.
 
 \begin{algorithm}[ht]
     \inputminted[linenos, frame=lines]{python}{./code/algorithms/miller_test.py}
-    \caption{Miller-Rabin Primality Test}
+    \caption{Miller Primality Test}
 \end{algorithm}
 
