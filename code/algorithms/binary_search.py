@@ -1,11 +1,11 @@
-def bs(q, arr):
+def bs(q, L):
     l = 0
-    r = len(arr) - 1
+    r = len(L) - 1
     while l <= r:
         m = (l + r) // 2
-        if arr[m] == q:
-            return m + 1
-        elif arr[m] < q:
+        if L[m] == q:
+            return m
+        elif L[m] < q:
             l = m + 1
         else:
             r = m - 1

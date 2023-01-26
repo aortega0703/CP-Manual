@@ -1,0 +1,34 @@
+Time: $O\(\log(n)\)$,\quad Space: $O(1)$.
+
+Given a sorted list $L$, it is possible to find an element $q$ in $\logarithm(n)$ time.
+To do this on each iteration the median element of the list is checked, if it is greater
+than $q$ we know that everything to its right is also greater than $q$ and thus can be
+discarted, if its less than $q$ we similarly can discard everything to its left. The
+algorithm then carries on with the remaining element of the list. This means that
+on each iteration the search space gets reduced by half. Accounting for a constant
+operation time of c on each iteration, the number of steps needed is given by the recurrence
+relation:  
+\begin{equation*}
+    T(n) = T(n/2) + c
+\end{equation*}
+It can be proved via induction that:
+\begin{equation*}
+    T(n) = T(n/2^k) + kc
+\end{equation*}
+With $k$ the number of halvings. Then, at some step $k$:
+\begin{align*}
+    T(n/2^k) &= T(1)\\
+    n/2^k &= 1\\
+    n &= 2^k\\
+    \logarithm_2(n) &= k
+\end{align*}
+Replacing on the original expression:
+\begin{align*}
+    T(n) &= T(n/2^{\logarithm_2(n)}) + c\logarithm_2(n)\\
+    &= T(1) + c\logarithm_2(n)
+\end{align*}
+$T(n)$ is then $O(\logarithm(n))$
+\begin{algorithm}[ht]
+    \inputminted[linenos, frame=lines]{python}{./code/algorithms/binary_search.py}
+    \caption{Binary Search}
+\end{algorithm}
