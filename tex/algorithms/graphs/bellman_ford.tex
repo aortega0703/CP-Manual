@@ -1,0 +1,14 @@
+Time: $O\(|V||E|\)$,\quad Space: $O(1)$.
+
+A shortest path (with no negative weight cycles) uses at most every vertex with
+no repeats (that is $|V| - 1$ edges), then to obtain the shortest distance to
+all nodes we simply uptade over all $|E|$ edges $|V| - 1$ times, making the time
+complexity analysis trivial. If there exists a negative weight cycle, then on an
+extra $|V|$-th distances are still being updated.
+
+\begin{algorithm}[ht]
+    \inputminted[linenos, frame=lines]{python}{
+        ./code/algorithms/graphs/bellman_ford.py
+    }
+    \caption{Bellman-Ford}
+\end{algorithm}

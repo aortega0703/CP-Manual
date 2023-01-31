@@ -1,4 +1,4 @@
-\documentclass[12pt]{article}
+\documentclass[12pt]{book}
 
 \usepackage[utf8]{inputenc}
 \usepackage[margin=1in]{geometry} 
@@ -29,21 +29,26 @@
 
 \tableofcontents
 
-\section{Algorithms}
-\subsection{Item Searching}
-    \subsubsection{Binary Search}
-        \input{tex/algorithms/binary_search.tex}
+\chapter{Algorithms}
+    \section{Graphs}
+        \subsection{Shortest Path Problem}
+            \subsubsection{Bellman-Ford Algorithm}
+                \input{tex/algorithms/graphs/bellman_ford.tex}
+    \section{Item Searching}
+        \subsubsection{Binary Search}
+            \input{tex/algorithms/binary_search.tex}
 
-\subsection{Primality Testing}
-    \subsubsection{Sieve of Eratosthenes}
-        \input{tex/algorithms/sieve_eratosthenes.tex}
+    \section{Primality Testing}
+        \subsubsection{Sieve of Eratosthenes}
+            \input{tex/algorithms/sieve_eratosthenes.tex}
 
-    \subsubsection{Miller Test}
-        \input{tex/algorithms/miller_test.tex}
+        \subsubsection{Miller Test}
+            \input{tex/algorithms/miller_test.tex}
 
-\subsection{Erdős' Multiplication Table Problem}
-    \subsubsection{Incremental Approach}
-        \input{tex/algorithms/erdos_multiplication_table.tex}
+    \section{Miscellaneous}
+        \subsection{Erdős' Multiplication Table Problem}
+            \subsubsection{Incremental Approach}
+                \input{tex/algorithms/erdos_multiplication_table.tex}
 
 \printbibliography
 \end{document}
