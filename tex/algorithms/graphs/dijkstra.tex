@@ -1,0 +1,12 @@
+Time: $O\((|V| + |E|)\log{|V|}\)$, \quad Space: $O\(|V|+|E|\)$
+
+This algorithm is an improvement over SPFA (which is in turn an improvement
+over Bellman-Ford) which uses a priority queue to select the next node to be
+explored. It expands the search frontier from the starting node outwards until
+it no longer can make any updates. 
+\begin{algorithm}[ht]
+    \inputminted[linenos, frame=lines]{python}{
+        ./code/algorithms/graphs/dijkstra.py
+    }
+    \caption{Dijkstra's Algorithm}
+\end{algorithm}
