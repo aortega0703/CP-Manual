@@ -14,7 +14,7 @@ that fools this method for all choices of $a$.
 
 It is not necessary to check for all values of $a$ for it has been shown that it
 suffices to check a small list of possible witnesses for a correct classification.
-Table \ref{tab:miller:a} contains some of these with their respective bounds.
+Table \ref{tab:miller} contains some of these with their respective bounds.
 Note that all values of $a$ are consecutive primes.
 
 \begin{table}[ht]
@@ -34,13 +34,13 @@ Note that all values of $a$ are consecutive primes.
         $3.317 \times 10^{24}$ & $\{2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41\}$
     \end{tabular}
     \caption{Possible witnesses for values of $n$
-        \label{tab:miller:a}}
+        \label{tab:miller}}
 \end{table}
 
 \begin{algorithm}[ht]
     \inputminted[linenos, frame=lines]{python}{
         code/algorithms/math/miller_test.py
     }
-    \caption{Miller Primality Test}
+    \caption{Miller Primality Test\label{alg:miller}}
 \end{algorithm}
 
